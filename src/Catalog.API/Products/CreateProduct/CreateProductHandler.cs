@@ -9,7 +9,7 @@ public record CreateProductCommand(
     : ICommand<CreateProductResult>;
 public record CreateProductResult(Guid Id);
 
-internal class CreateProductHandler 
+internal class CreateProductCommandHandler(IDocumentSession session) 
     : ICommandHandler<CreateProductCommand, CreateProductResult>
 {
     public async Task<CreateProductResult> Handle(
@@ -25,6 +25,9 @@ internal class CreateProductHandler
             Price = command.Price
         };
 
-        return new(Guid.NewGuid());
+        session.Store(product);
+        await session.SaveChangesAsync(cancellationToken);
+
+        return new(product.Id);
     }
 }

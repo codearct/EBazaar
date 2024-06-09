@@ -37,7 +37,7 @@ internal class UpdateProductCommandHandler(
         logger.LogInformation("UpdateProductCommandHandler.Handle called with {@Command}", command);
 
         var product = await session.LoadAsync<Product>(command.Id, cancellationToken);
-        if (product is null) throw new ProductNotFoundException();
+        if (product is null) throw new ProductNotFoundException(command.Id);
 
         product.Name = command.Name;
         product.Category = command.Category;
@@ -48,6 +48,6 @@ internal class UpdateProductCommandHandler(
         session.Update(product);
         await session.SaveChangesAsync(cancellationToken);
 
-        return new(true);   
+        return new(true);
     }
 }

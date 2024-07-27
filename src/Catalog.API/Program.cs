@@ -1,5 +1,7 @@
-var builder = WebApplication.CreateBuilder(args);
+using HealthChecks.UI.Client;
 
+var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("Database")!;
 #region Services
 
 var assembly = typeof(Program).Assembly;
@@ -17,13 +19,16 @@ builder.Services.AddCarter();
 
 builder.Services.AddMarten(op =>
 {
-    op.Connection(builder.Configuration.GetConnectionString("Database")!);
+    op.Connection(connectionString);
 }).UseLightweightSessions();
 
 if (builder.Environment.IsDevelopment())
     builder.Services.InitializeMartenWith<CatalogInitialData>();
 
 builder.Services.AddExceptionHandler<CustomExceptionHandler>();
+
+builder.Services.AddHealthChecks()
+    .AddNpgSql(connectionString);
 #endregion
 
 var app = builder.Build();
@@ -31,8 +36,14 @@ var app = builder.Build();
 #region Pipelines
 
 app.MapCarter();
+
 app.UseExceptionHandler(options => { });
 
+app.UseHealthChecks("/health",
+    new HealthCheckOptions
+    {
+        ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+    });
 #endregion
 
 app.Run();

@@ -12,3 +12,4 @@ global using Marten;
 global using Marten.Pagination;
 global using Marten.Schema;
 global using MediatR;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;

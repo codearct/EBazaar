@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{20AF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{2231D74E-EED0-48A5-8355-5DF47D1F31E3}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4D59ACCE-B33D-42E9-BF0D-DAE7EC6EF2FF}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{70A887DB-74E9-4FCB-A4AA-C7D20BDC7023}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{68494C42-9C93-4A88-8EE0-650BE78D1149}"
@@ -25,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D59ACCE-B33D-42E9-BF0D-DAE7EC6EF2FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D59ACCE-B33D-42E9-BF0D-DAE7EC6EF2FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D59ACCE-B33D-42E9-BF0D-DAE7EC6EF2FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D59ACCE-B33D-42E9-BF0D-DAE7EC6EF2FF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{68494C42-9C93-4A88-8EE0-650BE78D1149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{68494C42-9C93-4A88-8EE0-650BE78D1149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68494C42-9C93-4A88-8EE0-650BE78D1149}.Release|Any CPU.ActiveCfg = Release|Any CPU

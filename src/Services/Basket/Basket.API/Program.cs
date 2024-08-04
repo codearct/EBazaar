@@ -1,3 +1,5 @@
+using BuildingBlocks.Exceptions.Handler;
+
 var builder = WebApplication.CreateBuilder(args);
 
 #region Services
@@ -20,6 +22,8 @@ builder.Services.AddMarten(opts =>
 
 builder.Services.AddScoped<IBasketRepository,BasketRepository>();
 
+builder.Services.AddExceptionHandler<CustomExceptionHandler>();
+
 #endregion
 
 var app = builder.Build();
@@ -27,6 +31,8 @@ var app = builder.Build();
 #region Pipelines
 
 app.MapCarter();
+
+app.UseExceptionHandler(options => { });
 
 #endregion
 

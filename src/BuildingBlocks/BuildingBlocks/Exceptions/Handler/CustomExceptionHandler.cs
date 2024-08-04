@@ -10,7 +10,7 @@ public class CustomExceptionHandler(
         CancellationToken cancellationToken)
     {
         logger.LogError(
-            "Error Message {exceptionMessage}, Time of occurence {time}",
+            "Error Message : {exceptionMessage}, Time of occurence {time}",
             exception.Message,
             DateTime.UtcNow
         );

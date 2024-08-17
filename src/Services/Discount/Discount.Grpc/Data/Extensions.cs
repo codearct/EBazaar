@@ -7,7 +7,7 @@ public static class Extensions
     {
         using var scope = app.ApplicationServices.CreateScope();
         using var dbContext = scope.ServiceProvider.GetRequiredService<DiscountContext>();
-        dbContext.Database.MigrateAsync();//Why didn t have "await" keyword?
+        dbContext.Database.MigrateAsync();
 
         return app;
     }

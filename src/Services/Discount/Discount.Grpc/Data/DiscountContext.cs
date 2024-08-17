@@ -25,6 +25,5 @@ public class DiscountContext(DbContextOptions<DiscountContext> options)
                 Description = "Samsung Discount",
                 Amount = 100
             });
-        base.OnModelCreating(modelBuilder);
     }
 }

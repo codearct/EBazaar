@@ -32,14 +32,14 @@ public record Address
         string firstName,
         string lastName,
         string emailAddress,
-        string addressLİne,
+        string addressLine,
         string country,
         string state,
         string zipCode)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(emailAddress);
-        ArgumentException.ThrowIfNullOrWhiteSpace(addressLİne);
-        
-        return new Address(firstName,lastName,emailAddress,addressLİne,country, state, zipCode);
+        ArgumentException.ThrowIfNullOrWhiteSpace(addressLine);
+
+        return new Address(firstName, lastName, emailAddress, addressLine, country, state, zipCode);
     }
 }

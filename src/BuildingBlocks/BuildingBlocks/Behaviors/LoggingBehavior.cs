@@ -1,12 +1,10 @@
-﻿
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace BuildingBlocks.Behaviors;
 
 public class LoggingBehavior<TRequest, TResponse>(
     ILogger<LoggingBehavior<TRequest, TResponse>> logger
-)
- : IPipelineBehavior<TRequest, TResponse>
+) : IPipelineBehavior<TRequest, TResponse>
  where TRequest : notnull, IRequest<TResponse>
  where TResponse : notnull
 {

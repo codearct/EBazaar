@@ -75,7 +75,7 @@ services:
       - ConnectionStrings__Redis=distributedcache:6379
       - GrpcSettings__DiscountUrl=https://discount.grpc:8081
       - MessageBroker__Host=amqp://ebazaar-mq:5672
-      - MessageBroker__UserName=quest
+      - MessageBroker__UserName=guest
       - MessageBroker__Password=guest
     depends_on:
       - basketdb
@@ -109,7 +109,7 @@ services:
       - ASPNETCORE_HTTPS_PORTS=8081
       - ConnectionStrings__Database=Server=orderdb;Database=OrderDb;User ID=sa;Password=SwN12345678;Encrypt=False;TrustServerCertificate=True
       - MessageBroker__Host=amqp://ebazaar-mq:5672
-      - MessageBroker__UserName=quest
+      - MessageBroker__UserName=guest
       - MessageBroker__Password=guest
       - FeatureManagement__OrderFullfilment=false
     depends_on:

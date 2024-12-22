@@ -6,7 +6,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddRefitClient<ICatalogService>()
     .ConfigureHttpClient(client =>
     {
-        client.BaseAddress = new Uri(builder.Configuration["ApiiSettings:GatewayAddress"]!);
+        client.BaseAddress = new Uri(builder.Configuration["ApiSettings:GatewayAddress"]!);
     });
 
 var app = builder.Build();

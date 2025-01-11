@@ -1,6 +1,8 @@
 using HealthChecks.UI.Client;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddServiceDefaults();
 var connectionString = builder.Configuration.GetConnectionString("Database")!;
 #region Services
 
@@ -32,6 +34,8 @@ builder.Services.AddHealthChecks()
 #endregion
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 #region Pipelines
 

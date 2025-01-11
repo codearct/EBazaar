@@ -43,6 +43,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApps", "WebApps", "{71AB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ebazaar.Web", "WebApps\Ebazaar.Web\Ebazaar.Web.csproj", "{F8AC74E6-4AC1-4DA1-BA9F-B4D09945B7D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBazaar.AppHost", "EBazaar.AppHost\EBazaar.AppHost.csproj", "{F61DBBE5-85D4-4E85-9931-C2E0174F126F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBazaar.ServiceDefaults", "EBazaar.ServiceDefaults\EBazaar.ServiceDefaults.csproj", "{C50C0894-C70D-4942-9675-E4BDE3EDCC49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +101,14 @@ Global
 		{F8AC74E6-4AC1-4DA1-BA9F-B4D09945B7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8AC74E6-4AC1-4DA1-BA9F-B4D09945B7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8AC74E6-4AC1-4DA1-BA9F-B4D09945B7D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F61DBBE5-85D4-4E85-9931-C2E0174F126F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61DBBE5-85D4-4E85-9931-C2E0174F126F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61DBBE5-85D4-4E85-9931-C2E0174F126F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61DBBE5-85D4-4E85-9931-C2E0174F126F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C50C0894-C70D-4942-9675-E4BDE3EDCC49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50C0894-C70D-4942-9675-E4BDE3EDCC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50C0894-C70D-4942-9675-E4BDE3EDCC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C50C0894-C70D-4942-9675-E4BDE3EDCC49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

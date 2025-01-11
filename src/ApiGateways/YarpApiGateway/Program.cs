@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 #region Services
 
 builder.Services.AddReverseProxy()
@@ -18,6 +20,8 @@ builder.Services.AddRateLimiter(rateLimiterOptions =>
 #endregion
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 #region Pipeline
 

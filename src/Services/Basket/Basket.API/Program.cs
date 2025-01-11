@@ -5,6 +5,8 @@ using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddServiceDefaults();
 var dbConnection = builder.Configuration.GetConnectionString("Database");
 var redisConnection = builder.Configuration.GetConnectionString("Redis");
 #region Services
@@ -64,6 +66,8 @@ builder.Services.AddHealthChecks()
 #endregion
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 #region Pipelines
 

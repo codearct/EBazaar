@@ -3,6 +3,8 @@ using Discount.Grpc.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddServiceDefaults();
 var dbConnection = builder.Configuration.GetConnectionString("Database");
 
 #region Services
@@ -15,6 +17,8 @@ builder.Services.AddDbContext<DiscountContext>(options =>
 #endregion
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 #region Pipeline
 app.UseMigration();

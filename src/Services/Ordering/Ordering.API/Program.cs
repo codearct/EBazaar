@@ -5,6 +5,8 @@ using Ordering.Infrastructure.Data.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 #region Services
 
 builder.Services
@@ -16,6 +18,8 @@ builder.Services
 
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 
 #region Pipeline
